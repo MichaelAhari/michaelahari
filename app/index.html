@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myProfile" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myProfile" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myProfile" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myProfile" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Michael Ahari</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app.css">
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+
+  <!--google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans+Condensed:300|Oswald|Ubuntu|Ubuntu+Condensed" rel="stylesheet">
+</head>
+<body>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!--Background video-->
+<div class="cd-fixed-bg cd-bg-1" ng-controller="appController" ng-init="ended=false" ng-cloak>
+  <ul class="landing-info" ng-init="showLandingInfo=false" ng-show="showLandingInfo">
+    <li class="profile-img">
+      <img id="me" src="static/me-min.jpg">
+    </li>
+    <li class="welcome-message">
+      <h1 id="welcome">Michael Ahari</h1>
+    </li>
+    <li class="links">
+      <tr>
+        <td><a href="https://www.facebook.com/44MichaelAhari" target="_blank"><img style="height:40px" src="static/facebook_logo.png"/></a></td>
+        <td><a href="https://www.instagram.com/michaelahari_/" target="_blank"><img style="height:40px; margin-left:10px" src="static/instagram-new-min.png"/></a></td>
+        <td><a href="https://uk.linkedin.com/in/michael-ahari-tech" target="_blank"><img style="height:40px; margin-left:10px" src="static/linkedin_logo.png"/></a></td>
+        <td><a href="https://github.com/MichaelAhari" target="_blank"><img style="height:40px; margin-left:10px" src="static/github_logo.png"/></a></td>
+        <td><a href="https://mail.google.com/mail/?view=cm&fs=1&to=michaelahari1@gmail.com&su=Hey Michael!&body=Nice to meet you!" target="_blank"><img style="height:40px; margin-left:10px" src="static/gmail_logo.png"/></a></td>
+      </tr>
+    </li>
+  </ul>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="static/me.jpg" style="height:30px; border-radius:15px">
+        </a>
+      </div>
+    </div>
+    <div class="container" id="main-menu">
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-repeat="x in ['Intro', 'Hackathons & Projects', 'Photography', 'Contact']" ng-class="{'active-item': $root.getTargetObject(x)['active']}" ng-init="activeItem = false">
+          <a ng-click="$root.setTargetActive(x)" ng-href="{{ '#/me#' + $root.getTargetObject(x)['target'] }}" du-smooth-scroll duration="1500">{{x}}<span class="sr-only"></span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+  <div style="height:100%" ui-view></div>
+
+
+
+</div>
+
+
+
+
+
+
+<!--<div>Angular seed app: v<span app-version></span></div>-->
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-touch/angular-touch.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap.min.js"></script>
+<script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+<script src="app.js"></script>
+<script src="index/index.module.js"></script>
+<script src="index/index.controller.js"></script>
+<script src="intro/intro.module.js"></script>
+<script src="intro/intro.controller.js"></script>
+<script src="intro/intro.directive.js"></script>
+<script src="experience/experience.module.js"></script>
+<script src="experience/experience.controller.js"></script>
+<script src="experience/experience.directive.js"></script>
+<script src="hackathons-projects/hackathons-projects.module.js"></script>
+<script src="hackathons-projects/hackathons-projects.controller.js"></script>
+<script src="hackathons-projects/hackathons-projects.directive.js"></script>
+<script src="photo/photo.module.js"></script>
+<script src="photo/photo.controller.js"></script>
+<script src="photo/photo.directive.js"></script>
+<script src="contact/contact.module.js"></script>
+<script src="contact/contact.controller.js"></script>
+<script src="contact/contact.directive.js"></script>
+
+
+
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

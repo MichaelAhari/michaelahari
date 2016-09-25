@@ -1,0 +1,25 @@
+<div class="cd-fixed-bg cd-bg-3"></div>
+<div class="cd-scrolling-bg cd-color-3 shaped" id="hp" ng-controller="hpController" ng-init="displayHp=false">
+    <div class="content" ng-mouseenter="$root.setTargetActiveTrue('Hackathons & Projects')" ng-mouseleave="$root.setTargetActiveFalse('Hackathons & Projects')">
+        <h1 class="content-header">Hackathons & Projects</h1>
+        <hr>
+        <div class="hp-widget" ng-init="hoverOver=false" ng-repeat="x in hpItems" ng-class="{'expanded': x['expanded'], 'hover': hoverOver}" ng-click="setExpanded(x); hoverOver=false"
+             ng-mouseenter="hoverOver=true" ng-mouseleave="hoverOver=false" ng-style="{'background-image': x['background']}">
+            <h3 ng-show="x['expanded']">{{x['title']}}</h3>
+
+            <p ng-show="x['expanded']">{{x['content']}}</p>
+
+        </div>
+
+        <div class="technologies-widget">
+
+            <h3>Technologies</h3>
+
+            <p>Java</p>
+            <p>Python</p>
+            <p>Javascript</p>
+
+
+        </div>
+    </div>
+</div>
