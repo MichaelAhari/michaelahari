@@ -12,11 +12,11 @@ var myProfile = angular.module('myProfile', [
 
 myProfile.config(function($stateProvider, $urlRouterProvider) {
 
-  $urlRouterProvider.otherwise('/me');
+  $urlRouterProvider.otherwise('/index');
 
   $stateProvider
-      .state('me', {
-        url: '/me',
+      .state('index', {
+        url: '/index',
         templateUrl: '/index/index.template.html'
       });
 
