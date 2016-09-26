@@ -22,7 +22,7 @@
   <!--google fonts-->
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans+Condensed:300|Oswald|Ubuntu|Ubuntu+Condensed" rel="stylesheet">
 </head>
-<body>
+<body ng-cloak>
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -59,7 +59,7 @@
     <div class="container" id="main-menu">
       <ul class="nav navbar-nav navbar-right">
         <li ng-repeat="x in ['Intro', 'Hackathons & Projects', 'Photography', 'Contact']" ng-class="{'active-item': $root.getTargetObject(x)['active']}" ng-init="activeItem = false">
-          <a ng-click="$root.setTargetActive(x)" ng-href="{{ '#/me#' + $root.getTargetObject(x)['target'] }}" du-smooth-scroll duration="1500">{{x}}<span class="sr-only"></span></a>
+          <a ng-click="$root.setTargetActive(x)" ng-href="{{ '#/index#' + $root.getTargetObject(x)['target'] }}" du-smooth-scroll duration="1500">{{x}}<span class="sr-only"></span></a>
         </li>
       </ul>
     </div>
