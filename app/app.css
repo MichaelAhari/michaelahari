@@ -204,7 +204,7 @@ div#main-menu{
   height:100%;
   width:100%;
   float:right;
-  background-image:url("static/IMG_0336-min.png");
+  background-image:url("static/home-bg-small.jpg");
   background-size:cover;
   /*shape-outside: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*!*/
   /*-webkit-clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
@@ -243,7 +243,7 @@ div#main-menu{
   height:100%;
   width:100%;
   float:right;
-  background-image:url("static/IMG_8026-min.JPG");
+  background-image:url("static/bg-4.jpg");
   background-size:cover;
   /*shape-outside: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
   /*-webkit-clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
@@ -256,7 +256,7 @@ div#main-menu{
   height:100%;
   width:100%;
   float:right;
-  background-image:url("static/IMG_0337-min.JPG");
+  background-image:url("static/bg-5.jpg");
   background-size:cover;
   /*shape-outside: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
   /*-webkit-clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
