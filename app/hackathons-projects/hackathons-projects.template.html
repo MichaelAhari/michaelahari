@@ -1,25 +1,43 @@
 <div class="cd-fixed-bg cd-bg-3"></div>
-<div class="cd-scrolling-bg cd-color-3 shaped" id="hp" ng-controller="hpController" ng-init="displayHp=false">
-    <div class="content" ng-mouseenter="$root.setTargetActiveTrue('Hackathons & Projects')" ng-mouseleave="$root.setTargetActiveFalse('Hackathons & Projects')">
+<div id="hp" class="shaped-top"></div>
+<div class="cd-scrolling-bg cd-color scrolling-screen" ng-controller="hpController" ng-init="displayHp=false">
+    <div class="container content" ng-mouseenter="$root.setTargetActiveTrue('Hackathons & Projects')" ng-mouseleave="$root.setTargetActiveFalse('Hackathons & Projects')">
         <h1 class="content-header">Hackathons & Projects</h1>
         <hr>
-        <div class="hp-widget" ng-init="hoverOver=false" ng-repeat="x in hpItems" ng-class="{'expanded': x['expanded'], 'hover': hoverOver}" ng-click="setExpanded(x); hoverOver=false"
-             ng-mouseenter="hoverOver=true" ng-mouseleave="hoverOver=false" ng-style="{'background-image': x['background']}">
-            <h3 ng-show="x['expanded']">{{x['title']}}</h3>
+        <!--<div class="hp-widget" ng-init="hoverOver=false" ng-repeat="x in hpItems" ng-class="{'expanded': x['expanded'], 'hover': hoverOver}" ng-click="setExpanded(x); hoverOver=false"-->
+             <!--ng-mouseenter="hoverOver=true" ng-mouseleave="hoverOver=false" ng-style="{'background-image': x['background']}">-->
+            <!--<h3 ng-show="x['expanded']">{{x['title']}}</h3>-->
 
-            <p ng-show="x['expanded']">{{x['content']}}</p>
+            <!--<p ng-show="x['expanded']">{{x['content']}}</p>-->
 
+        <!--</div>-->
+
+        <!--<div class="technologies-widget">-->
+
+            <!--<h3>Technologies</h3>-->
+
+            <!--<p>Java</p>-->
+            <!--<p>Python</p>-->
+            <!--<p>Javascript</p>-->
+        <!--</div>-->
+
+        <div>
+            <div style="display:flex; width:100%; margin:auto"uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                <div uib-slide ng-repeat="slide in hpItems track by slide.id" index="slide.id">
+                    <img class="carousel-image sm-device" ng-src="{{slide.sm}}">
+                    <div class="carousel-caption">
+                        <h3>{{slide.title}}</h3>
+                        <div ng-bind-html="slide.content"></div>
+                    </div>
+                    <img class="carousel-image lg-device" ng-src="{{slide.lg}}">
+                    <div class="carousel-caption">
+                        <h3>{{slide.title}}</h3>
+                        <div ng-bind-html="slide.content"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="technologies-widget">
-
-            <h3>Technologies</h3>
-
-            <p>Java</p>
-            <p>Python</p>
-            <p>Javascript</p>
-
-
-        </div>
     </div>
 </div>
+<div class="shaped-bottom"></div>

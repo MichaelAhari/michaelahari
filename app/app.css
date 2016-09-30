@@ -5,6 +5,10 @@ html,body,main{
   width:100%;
 }
 
+body{
+  margin-top:30px;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -40,6 +44,8 @@ html,body,main{
   left: 0;
   height: 100%;
   width: 100%;
+  padding:0;
+  margin:0;
 }
 
 .bgimg {
@@ -49,19 +55,71 @@ html,body,main{
   opacity: 0;
 }
 
-@media (min-aspect-ratio: 16/9) {
-  #bgvid, #bgimg {
-    width: 100%;
-    height:auto;
+/*@media (min-aspect-ratio: 16/9) {*/
+  /*#bgvid, #bgimg {*/
+    /*width: 100%;*/
+    /*height:auto;*/
+    /*margin:0;*/
+    /*padding:0;*/
+  /*}*/
+/*}*/
+
+/*@media (max-aspect-ratio: 16/9) {*/
+  /*#bgvid, #bgimg {*/
+    /*width: auto;*/
+    /*height:100%;*/
+    /*margin:0;*/
+    /*padding:0;*/
+  /*}*/
+/*}*/
+
+
+.carousel-caption{
+  text-shadow:none;
+  top:10%;
+  color:black;
+  text-align:justify;
+}
+
+.carousel-image{
+  opacity:0.5;
+}
+
+
+@media only screen and (min-width: 320px)  and (max-width: 480px){
+
+  .carousel-image{
+
+  }
+
+  .carousel-image.lg-device{
+    display:none !important;
+  }
+
+  .carousel-caption{
+    font-size:15px;
   }
 }
 
-@media (max-aspect-ratio: 16/9) {
-  #bgvid, #bgimg {
-    width: auto;
-    height:100%;
+@media only screen and (min-width: 1200px) {
+
+  .carousel-image{
+    margin:auto;
+    height:500px;
+    width:100%;
   }
+
+  .carousel-image.sm-device{
+    display:none !important;
+  }
+
+  .carousel-caption{
+    font-size:18px;
+
+  }
+
 }
+
 
 .landing-info{
   position:relative;
@@ -104,94 +162,121 @@ li.welcome-message, li.links{
 div#home{
   height:100%;
   width:100%;
+  margin:0;
+  padding:0;
 }
 
-div#intro{
-  margin-top:-5%;
-  height:100%;
-  width:100%;
-}
-
-div#hp{
-  margin-top:-5%;
-  height:100%;
-  width:100%;
-}
-
-div#photo{
-  margin-top:-5%;
-  height:100%;
-  width:100%;
-}
-
-div#contact{
-  margin-top:-5%;
-}
 .content.ng-hide{
   opacity: 0;
 }
 
-.navbar-fixed-top{
-  z-index:999;
-  transition: all linear 0.3s;
+/*.navbar-fixed-top{*/
+  /*z-index:999;*/
+  /*transition: all linear 0.3s;*/
+/*}*/
+
+/*.navbar-fixed-top.ng-hide{*/
+  /*opacity:0;*/
+/*}*/
+
+/*div#main-menu{*/
+/*}*/
+
+/*.navbar-default{*/
+  /*border-color: #3d93ca;*/
+  /*background: #3d93ca;*/
+/*}*/
+
+.navbar.navbar-default{
+  border:none;
 }
 
-.navbar-fixed-top.ng-hide{
-  opacity:0;
-}
-
-div#main-menu{
-}
-
-.navbar-default{
-  border-color: #3d93ca;
-  background: #3d93ca;
+.navbar.navbar-default .navbar-collapse{
+  border:none;
+  box-shadow:none;
+  text-align:right;
 }
 
 .navbar {
-  float:left;
-  height:15%;
-  width:100%;
-  float:right;
+  height:60px;
   background: #3d93ca center top no-repeat;
   background-size:cover;
-  shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 50%);
-  -webkit-clip-path: polygon(0 0 , 100% 0, 100% 100%, 0 50%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+  border:none;
+  /*!*shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 50%);*!*/
+  /*!*-webkit-clip-path: polygon(0 0 , 100% 0, 100% 100%, 0 50%);*!*/
+  /*!*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);*!*/
+}
+
+.navbar-collapse.collapse.in{
+  background: #3d93ca center top no-repeat;
+  border:none;
+}
+
+.navbar-collapse.collapsing{
+  background: #3d93ca center top no-repeat;
+  border:none;
+}
+
+.navbar-collapse.in{
+  overflow-y:hidden;
+}
+
+.shaped-navbar{
+  background: #3d93ca center top no-repeat !important;
+  position:fixed;
+  z-index:999;
+}
+
+
+.scrolling-screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
 }
 
 .content{
-  padding-top:70px;
   transition:all linear 0.1s;
-  padding-left:5%;
-  padding-right:5%;
   color:#0d3349;
   font-family: 'ubuntu';
   font-size: 15px;
-  position:absolute;
-  width:100%;
-  height:70%;
+  padding-bottom:5px;
 }
 
-.shaped{
+.shaped-top{
   float:left;
-  height:100%;
+  height:60px;
   width:100%;
   float:right;
   background: #82a7ca center top no-repeat;
   background-size:cover;
-  shape-outside: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);
-  -webkit-clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);
-  clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);
+  shape-outside: polygon(0 0, 100% 50%, 100% 100%, 0 100% );
+  -webkit-clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+  padding: 0;
+  margin:0;
+  margin-top:-30px;
 }
+
 
 .shaped-bottom{
-  shape-outside: polygon(0 0, 100% 7.5%, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 100%);
+  float:left;
+  height:60px;
+  width:100%;
+  float:right;
+  background: #82a7ca center top no-repeat;
+  background-size:cover;
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+  padding: 0;
+  margin:0;
 }
 
+
+
 .cd-fixed-bg {
+  position:relative;
   min-height: 100%;
   background-size: cover;
   background-attachment: fixed;
@@ -206,71 +291,61 @@ div#main-menu{
   float:right;
   background-image:url("static/home-bg-small.jpg");
   background-size:cover;
-  /*shape-outside: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*!*/
-  /*-webkit-clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
-  /*clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
 }
 
 .cd-fixed-bg.cd-bg-2 {
-  margin-top:-5%;
   float:left;
   height:100%;
   width:100%;
   float:right;
   background-image:url("static/IMG_8262-min.JPG");
   background-size:cover;
-  /*shape-outside: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
-  /*-webkit-clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
-  /*clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
 }
 
 .cd-fixed-bg.cd-bg-3 {
-  margin-top:-5%;
+  z-index:-999;
+  margin-top:-30px;
   float:left;
   height:100%;
   width:100%;
   float:right;
   background-image:url("static/hackathons-bg.jpg");
   background-size:cover;
-  /*shape-outside: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
-  /*-webkit-clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
-  /*clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
 }
 
 .cd-fixed-bg.cd-bg-4 {
-  margin-top:-5%;
+  z-index:-999;
+  margin-top:-30px;
   float:left;
   height:100%;
   width:100%;
   float:right;
   background-image:url("static/bg-4.jpg");
   background-size:cover;
-  /*shape-outside: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
-  /*-webkit-clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
-  /*clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
 }
 
 .cd-fixed-bg.cd-bg-5 {
-  margin-top:-5%;
+  z-index:-999;
+  margin-top:-30px;
   float:left;
   height:100%;
   width:100%;
   float:right;
   background-image:url("static/bg-5.jpg");
   background-size:cover;
-  /*shape-outside: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
-  /*-webkit-clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
-  /*clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 92.5%);*/
 }
-
-
 
 .cd-scrolling-bg {
   min-height: 100%;
 }
 
+.cd-color{
+  background: #82a7ca center top no-repeat;
+  background-size:cover;
+}
+
 #main-menu ul{
-  margin-top:10px;
+  padding-top:5px;
 }
 #main-menu li {
   margin-left: 20px;

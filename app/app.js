@@ -7,7 +7,9 @@ var myProfile = angular.module('myProfile', [
   'myProfile.version',
   'ui.bootstrap',
    'ngAnimate',
-    'duScroll'
+    'duScroll',
+    'ngTouch',
+    'ngSanitize'
 ]);
 
 myProfile.config(function($stateProvider, $urlRouterProvider) {

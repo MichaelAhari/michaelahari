@@ -1,34 +1,46 @@
-<div id="intro" class="cd-scrolling-bg cd-color-2 shaped" ng-controller="introController" ng-mouseenter="$root.setTargetActiveTrue('Intro')" ng-mouseleave="$root.setTargetActiveFalse('Intro')">
-     <div class="content">
-         <h2 class="content-header">Intro</h2>
-         <hr>
-         <div id="left-content">
-             <h4><i>A bit about me</i></h4>
-             <p>My name is Michael, I'm 20 years old and I live in Edinburgh, UK.</p>
-             <p>I'm in the 3rd year of my Computer Science degree at the University of Edinburgh, graduating in 2018.</p>
-             <p>Outside of my studies I attend hackathons, working on cool projects, around the country. In 2016 I was involved in organising Hack The Burgh,
-                 the second ever hackathon at my university, which was both fun and stressful at the same time!</p>
-             <p>I like my sports too (I know that's weird for a tech person) - football (soccer-football, that is) and formula 1 are my favorite.</p>
-             <p>And I also take photos from time to time. You can see some of my stuff here.</p>
+<div id="intro" class="shaped-top"></div>
+<div class="cd-scrolling-bg cd-color scrolling-screen" ng-controller="introController" ng-mouseenter="$root.setTargetActiveTrue('Intro')" ng-mouseleave="$root.setTargetActiveFalse('Intro')">
+    <div class="container content">
+         <div class="row">
+             <div class="col-md-12">
+                 <h2>Intro</h2>
+                 <hr>
+             </div>
          </div>
-
-         <div id="right-content">
-             <h4><i>What I've been up to recently</i></h4>
-             <p>In September 2016 I headed down to London for SIGNAL, a developer conference hosted by Twilio.</p>
-                 <p>Topics ranged from multi player flappy bird using the new Sync API, to the theory of Cyborgs and Human API's, to building for social good with Twilio.org,
-                 to doing cool stuff with Google's Vision API on their Cloud Platform. I met some awesome people and left with tons of new ideas, so overall a great day out!</p>
-             <br>
-             <h4><i>My Summer at JPMorgan Chase & Co.</i></h4>
-             <p>I spent 10 weeks at JPM's Glasgow Technology Centre, in a team working on a new application to automate the rebalancing of client accounts. Primarily I worked individually on a new front end POC in Angular.</p>
-             <p>For the last month or so, I also worked with the substantial backend codebase, writing interfaces to extract data loaded from the store and perform integrity validations on application start up.</p>
+         <div class="row">
+             <div class="col-md-4">
+                 <div>
+                     <h4><i>A bit about me</i></h4>
+                     <p>My name is Michael, I'm 20 years old and I live in Edinburgh, UK.</p>
+                     <p>I'm in the 3rd year of my Computer Science degree at the University of Edinburgh, graduating in 2018.</p>
+                     <p>Outside of my studies I attend hackathons, working on cool projects, around the country. In 2016 I was involved in organising Hack The Burgh,
+                         the second ever hackathon at my university, which was both fun and stressful at the same time!</p>
+                     <p>I like my sports too (is that weird for a tech person?) - football (soccer-football, that is) and formula 1 are my favorite.</p>
+                     <p>And I also take photos from time to time. You can see some of my stuff here.</p>
+                 </div>
+             </div>
+             <div class="col-md-1"></div>
+             <div class="col-md-7">
+                 <div>
+                     <h4><i>What I've been up to recently</i></h4>
+                     <p>In September 2016 I headed down to London for SIGNAL, a developer conference hosted by Twilio.</p>
+                     <p>Topics ranged from multi player flappy bird using the new Sync API, to the theory of Cyborgs and Human API's, to building for social good with Twilio.org,
+                         to doing cool stuff with Google's Vision API on their Cloud Platform. I met some awesome people and left with tons of new ideas, so overall a great day out!</p>
+                     <br>
+                     <h4><i>My Summer at JPMorgan Chase & Co.</i></h4>
+                     <p>I spent 10 weeks at JPM's Glasgow Technology Centre, in a team working on a new application to automate the rebalancing of client accounts. Primarily I worked individually on a new front end POC in Angular.</p>
+                     <p>For the last month or so, I also worked with the substantial backend codebase, writing interfaces to extract data loaded from the store and perform integrity validations on application start up.</p>
+                 </div>
+             </div>
          </div>
-
-         <div style="float:left; text-align:center">
-             <br>
-         <p><b>I am currently looking for internships for Summer 2017. Please get in touch with me <a href="#/me#contact">here</a> and connect with me on social media.
-             I'd love to get some feedback on this site!</b></p>
+        <br>
+         <div class="row">
+             <div class="col-md-12">
+                 <p><b>I am currently looking for internships for Summer 2017. Please get in touch with me <a href="#/me#contact">here</a> and connect with me on social media.
+                     I'd love to get some feedback on this site!</b></p>
+             </div>
          </div>
-
      </div>
  </div>
+<div class="shaped-bottom"></div>
 

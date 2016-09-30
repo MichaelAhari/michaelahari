@@ -1,7 +1,9 @@
 <div class="cd-fixed-bg cd-bg-4"></div>
-<div class="cd-scrolling-bg shaped" id="photo" ng-controller="photoController">
-    <div class="content" ng-mouseenter="$root.setTargetActiveTrue('Photography')" ng-mouseleave="$root.setTargetActiveFalse('Photography')">
-        <h1 class="content-header">Photography</h1>
+<div id="photo" class="shaped-top"></div>
+<div class="cd-scrolling-bg cd-color scrolling-screen" ng-controller="photoController">
+    <div class="container content" ng-mouseenter="$root.setTargetActiveTrue('Photography')" ng-mouseleave="$root.setTargetActiveFalse('Photography')">
+        <h1>Photography</h1>
         <p>Some stuff about photography</p>
     </div>
 </div>
+<div class="shaped-bottom"></div>

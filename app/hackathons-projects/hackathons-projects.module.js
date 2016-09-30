@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('myProfile.hp', []);
+angular.module('myProfile.hp', ['ui.bootstrap', 'ngTouch', 'ngSanitize']);
