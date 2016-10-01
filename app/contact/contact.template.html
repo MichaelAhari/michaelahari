@@ -1,13 +1,16 @@
 <div class="cd-fixed-bg cd-bg-5"></div>
 <div id="contact" class="shaped-top"></div>
 <div class="cd-scrolling-bg cd-color scrolling-screen" ng-controller="contactController">
-    <div class="container content" ng-mouseenter="$root.setTargetActiveTrue('Contact')" ng-mouseleave="$root.setTargetActiveFalse('Contact')">
-        <h1 class="content-header">Contact</h1>
-        <p>Some stuff about contacting me</p>
+    <div class="container content" ng-mouseenter="$root.setTargetActiveTrue('Contact'); " ng-mouseleave="$root.setTargetActiveFalse('Contact')">
+        <h2>Contact</h2>
+    </div>
 
+    <div style="margin:auto">More stuff coming soon!</div>
 
-        <div class="footer">
-            <p><b>Made with <i class="em em-poop"></i> by <a href="http://github.com/MichaelAhari" target="about_blank">Michael</a>. Photos are my own except Hack The Burgh (credit: MLH)</b></p>
+    <div class="shaped-top footer" ng-show="true">
+        <div style="margin:auto">
+            <b>Made with <i class="em em-poop"></i> by <a href="http://github.com/MichaelAhari" target="about_blank">Michael</a>. Photos are my own except Hack The Burgh (credit: MLH)</b>
         </div>
     </div>
+    <div class="footer-block"></div>
 </div>

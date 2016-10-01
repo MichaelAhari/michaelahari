@@ -32,8 +32,8 @@ module('myProfile.hp').controller('hpController', ['$scope', '$sce', function($s
             'sm' : 'static/placeholder-sm.jpg',
             'content' : $sce.trustAsHtml(
                 '<br><p>Did you know you can download all your Facebook Messenger data?</p><br>' +
-                '<p>We discovered this at StacsHack and decided to build a bot that responds just like you would in normal conversation (well, sort of).</p><br>' +
-                '<p>We generated possible bigrams, trigrams, follow words, then selected randomly from a dictionary of possible responses. The results were interesting and funny!</p><br>' +
+                '<p>We discovered this at StacsHack and decided to build a bot that responds just like you would in normal conversation (well, sort of). ' +
+                'We generated possible bigrams, trigrams, follow words, then selected randomly from a dictionary of possible responses. The results were interesting and funny!</p><br>' +
                 '<p>I spent most of the weekend discovering that Facebook Messenger had done everything to prevent automated scraping and posting of messages.' +
                 'In the end we went with a Telegram bot implementation which worked well enough for a demo.</p>')
 

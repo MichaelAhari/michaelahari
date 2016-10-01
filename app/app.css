@@ -6,7 +6,6 @@ html,body,main{
 }
 
 body{
-  margin-top:30px;
 }
 
 .menu {
@@ -88,6 +87,16 @@ body{
 
 @media only screen and (min-width: 320px)  and (max-width: 480px){
 
+  p{
+    font-size:13px;
+    text-align:justify;
+  }
+
+  h2{
+    font-size:25px;
+  }
+
+
   .carousel-image{
 
   }
@@ -97,8 +106,31 @@ body{
   }
 
   .carousel-caption{
-    font-size:15px;
+    font-size:13px;
   }
+
+  .cd-fixed-bg.cd-bg-1{
+    background-image:url("static/home-bg-sm.jpg");
+    height:100%
+  }
+
+  .cd-fixed-bg.cd-bg-3 {
+    background-image: url("static/hackathons-bg-sm.jpg");
+    height:100%;
+  }
+
+  .cd-fixed-bg.cd-bg-4{
+    background-image: url("static/bg-4-sm.jpg");
+    height:100%;
+  }
+
+  .cd-fixed-bg.cd-bg-5{
+    background-image:url("static/bg-5-sm.jpg");
+    height:100%;
+  }
+
+
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -117,6 +149,29 @@ body{
     font-size:18px;
 
   }
+
+  .cd-fixed-bg.cd-bg-1{
+    background-image:url("static/home-bg.jpg");
+    height:100%;
+  }
+
+  .cd-fixed-bg.cd-bg-3{
+    background-image: url("static/hackathons-bg.jpg");
+    height:100%;
+  }
+
+  .cd-fixed-bg.cd-bg-4{
+    background-image: url("static/bg-4.jpg");
+    height:100%;
+  }
+
+  .cd-fixed-bg.cd-bg-5{
+    background-image:url("static/bg-5.jpg");
+    height:100%;
+  }
+
+
+
 
 }
 
@@ -232,7 +287,6 @@ div#home{
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0;
 }
 
 .content{
@@ -284,55 +338,19 @@ div#home{
   background-position: center center;
 }
 
-.cd-fixed-bg.cd-bg-1 {
-  float:left;
-  height:100%;
-  width:100%;
-  float:right;
-  background-image:url("static/home-bg-small.jpg");
-  background-size:cover;
-}
-
-.cd-fixed-bg.cd-bg-2 {
-  float:left;
-  height:100%;
-  width:100%;
-  float:right;
-  background-image:url("static/IMG_8262-min.JPG");
-  background-size:cover;
-}
-
 .cd-fixed-bg.cd-bg-3 {
   z-index:-999;
   margin-top:-30px;
-  float:left;
-  height:100%;
-  width:100%;
-  float:right;
-  background-image:url("static/hackathons-bg.jpg");
-  background-size:cover;
 }
 
 .cd-fixed-bg.cd-bg-4 {
   z-index:-999;
   margin-top:-30px;
-  float:left;
-  height:100%;
-  width:100%;
-  float:right;
-  background-image:url("static/bg-4.jpg");
-  background-size:cover;
 }
 
 .cd-fixed-bg.cd-bg-5 {
   z-index:-999;
   margin-top:-30px;
-  float:left;
-  height:100%;
-  width:100%;
-  float:right;
-  background-image:url("static/bg-5.jpg");
-  background-size:cover;
 }
 
 .cd-scrolling-bg {
@@ -448,4 +466,18 @@ hr{
   float: right;
   height: 120%;
   width: 20%;
+}
+
+.footer{
+  padding-top:15px;
+  font-family: 'ubuntu';
+  background:#2e6da4;
+  border: none !important;
+}
+
+.footer-block{
+  height:40px;
+  width:100%;
+  background:#2e6da4;
+  border:none !important;
 }
