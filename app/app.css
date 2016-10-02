@@ -3,6 +3,7 @@
 html,body,main{
   height:100%;
   width:100%;
+  /*overflow-y:scroll;*/
 }
 
 body{
@@ -96,6 +97,10 @@ body{
     font-size:25px;
   }
 
+  .shaped-bottom.shaped-navbar{
+    display:none;
+  }
+
 
   .carousel-image{
 
@@ -110,8 +115,12 @@ body{
   }
 
   .cd-fixed-bg.cd-bg-1{
+    display:block;
     background-image:url("static/home-bg-sm.jpg");
-    height:100%
+    height:100%;
+    /*background-size:cover;*/
+    background-attachment:fixed;
+    position:relative;
   }
 
   .cd-fixed-bg.cd-bg-3 {
@@ -129,6 +138,15 @@ body{
     height:100%;
   }
 
+  .home{
+    padding-top:80px;
+  }
+
+  img#me{
+    height:200px;
+    width:200px;
+    border-radius:100px;
+  }
 
 
 }
@@ -151,29 +169,49 @@ body{
   }
 
   .cd-fixed-bg.cd-bg-1{
+    background-size:cover;
     background-image:url("static/home-bg.jpg");
     height:100%;
   }
 
   .cd-fixed-bg.cd-bg-3{
+    background-size:cover;
     background-image: url("static/hackathons-bg.jpg");
     height:100%;
   }
 
   .cd-fixed-bg.cd-bg-4{
+    backgrond-size:cover;
     background-image: url("static/bg-4.jpg");
     height:100%;
   }
 
   .cd-fixed-bg.cd-bg-5{
+    background-size:cover;
     background-image:url("static/bg-5.jpg");
     height:100%;
   }
 
+  .home{
+    padding-top:125px;
+  }
 
-
+  img#me {
+    height:250px;
+    width:250px;
+    border-radius: 125px;
+  }
 
 }
+
+.home{
+  height:100%;
+}
+
+img#me{
+  box-shadow: 10px 10px 5px #888888;
+}
+
 
 
 .landing-info{
@@ -185,12 +223,6 @@ body{
 
 .landing-info.ng-hide{
   opacity:0;
-}
-
-img#me {
-  height:250px;
-  width:250px;
-  border-radius: 125px;
 }
 
 h1#welcome {
@@ -331,11 +363,11 @@ div#home{
 
 .cd-fixed-bg {
   position:relative;
-  min-height: 100%;
-  background-size: cover;
+  max-height: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
+  transition: height 0.4s;
 }
 
 .cd-fixed-bg.cd-bg-3 {
