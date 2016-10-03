@@ -21,18 +21,35 @@
             <!--<p>Javascript</p>-->
         <!--</div>-->
 
-        <div>
-            <div style="display:flex; width:100%; margin:auto"uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                <div uib-slide ng-repeat="slide in hpItems track by slide.id" index="slide.id">
-                    <img class="carousel-image sm-device" ng-src="{{slide.sm}}">
-                    <div class="carousel-caption">
-                        <h3>{{slide.title}}</h3>
-                        <div ng-bind-html="slide.content"></div>
-                    </div>
-                    <img class="carousel-image lg-device" ng-src="{{slide.lg}}">
-                    <div class="carousel-caption">
-                        <h3>{{slide.title}}</h3>
-                        <div ng-bind-html="slide.content"></div>
+        <!--<div>-->
+            <!--<div style="display:flex; width:100%; margin:auto"uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">-->
+                <!--<div uib-slide ng-repeat="slide in hpItems track by slide.id" index="slide.id">-->
+                    <!--<img class="carousel-image sm-device" ng-src="{{slide.sm}}">-->
+                    <!--<div class="carousel-caption">-->
+                        <!--<h3>{{slide.title}}</h3>-->
+                        <!--<div ng-bind-html="slide.content"></div>-->
+                    <!--</div>-->
+                    <!--<img class="carousel-image lg-device" ng-src="{{slide.lg}}">-->
+                    <!--<div class="carousel-caption">-->
+                        <!--<h3>{{slide.title}}</h3>-->
+                        <!--<div ng-bind-html="slide.content"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="row">
+            <div class="col-md-3" ng-repeat="item in hpItems">
+                <div class="thumbnail" ng-click="item.expanded = true">
+                    <!--<img class="sm-device" ng-src="{{item.sm}}" alt=""/>-->
+                    <img ng-src="{{item.img}}" alt=""/>
+                    <div class="caption">
+                        <h4>{{item.title}}</h4>
+                        <div ng-bind-html="item.content" style="text-align: justify">
+                        </div>
+                        <div ng-if="item.id === 0">
+                            <a href="https://github.com/MichaelAhari/htb-commit-scraper" target="_blank"><img style="height:30px" src="static/github_logo.png"/></a>
+                        </div>
                     </div>
                 </div>
             </div>

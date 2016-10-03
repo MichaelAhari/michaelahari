@@ -148,6 +148,9 @@ body{
     border-radius:100px;
   }
 
+  .lg-device{
+    display:none;
+  }
 
 }
 
@@ -200,6 +203,10 @@ body{
     height:250px;
     width:250px;
     border-radius: 125px;
+  }
+
+  .sm-device{
+    display:none;
   }
 
 }
@@ -512,4 +519,29 @@ hr{
   width:100%;
   background:#2e6da4;
   border:none !important;
+}
+
+.thumbnail{
+  background-color:#2e6da4;
+  border: none;
+  box-shadow: 0 0 20px #888888;
+}
+
+.ng-hide-add, .ng-hide-remove{
+  transition: all linear 2s;
+}
+
+.ng-hide{
+  opacity:0;
+}
+
+.panel.panel-default{
+  background-color:#3d93ca;
+  border:none;
+}
+
+.panel-default>.panel-heading{
+  color:#0d3349;
+  background-color:#2e6da4;
+  border-color:#2e6da4;
 }
